@@ -5,13 +5,13 @@
 </head>
 <body>
     <h1>To-Do</h1>
-    <form method="post">
+    <form method="post">{% csrf_token %}
         <input name="item_next" id="id_new_item" placeholder="Enter a to-do item">
     </form>
 
     <table style="width:100%" id="id_list_table">
       <tr>
-        <td>1: Buy peacock feathers</td>
+        <td>{{ new_item_text }}</td>
       </tr>
     </table>
 </body>
